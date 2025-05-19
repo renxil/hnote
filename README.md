@@ -1,1 +1,5 @@
-#a little markdown tool-- h5 markdown note 
+# A little markdown tool—H5 markdown note
+
+## Running Tests
+
+Execute `./test/run-tests.sh` to run the small Node.js test suite.

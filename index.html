@@ -11,26 +11,19 @@
 <body style="padding:30px;background:#e6e6e6;">
 <div style="width:100%;padding:7px;">
 <button type="button" align="center" class="btn btn-primary btn-lg" style="font-size:30px;">
-  <span class="glyphicon glyphicon-user"></span> This is the HNote , Pls Enjoy .
+  <span class="glyphicon glyphicon-user"></span> This is the HNote, Please enjoy.
 </button>
 </div>
-<textarea id="text-input" oninput="this.editer.update()" style="width:50%;height:768px;background:#e6f6f6 ;font-size:16px;">
+<textarea id="text-input" oninput="this.editor.update()" style="width:50%;height:768px;background:#e6f6f6 ;font-size:16px;">
 </textarea>
 <div id="preview" style="float:right;width:50%;height:768px; border:1px solid #315;background:#CBEFD9;padding:10px;"></div>
 <script src='js/markdown.js'></script>
+<script src='js/editor.js'></script>
 <script type="text/javascript">
-    function Editor(input , preview){
-        this.update = function(){
-            preview.innerHTML = markdown.toHTML(input.value);
-        };
-        input.editer = this
-        this.update()
-    }
-
     var $ = function(id) {
-        return document.getElementById(id)
-    }
-    new Editor($("text-input"),$("preview"))
+        return document.getElementById(id);
+    };
+    new Editor($("text-input"), $("preview"), markdown);
 </script>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
